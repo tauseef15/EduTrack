@@ -1,0 +1,66 @@
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs
+*.log
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# dotenv environment variables
+.env
+.env.*.local
+
+# build output
+dist/
+build/
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# Coverage
+coverage/
+
+# Optional npm cache directory
+.npm/
+
+# Optional eslint cache
+.eslintcache
+
+# Local MongoDB database
+dump/
+*.mongodb
+
+# IDE files
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Parcel-bundler
+.cache/
+.parcel-cache/
+
+# Next.js
+.next/
+
+# Typescript
+*.tsbuildinfo
+
+# Firebase
+.firebase/
+.firebaserc
+
+# JetBrains
+*.iml
+out/
+
+# Others
+*.local
