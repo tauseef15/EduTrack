@@ -50,7 +50,7 @@ const StudentNavbar = () => {
       if (!token) return;
 
       try {
-        const res = await fetch("http://localhost:3000/api/student/profile", {
+        const res = await fetch("https://edutrack-qldm.onrender.com/api/student/profile", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

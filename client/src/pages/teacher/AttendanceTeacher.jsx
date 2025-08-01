@@ -16,7 +16,7 @@ const MarkAttendance = () => {
     const fetchClassrooms = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/api/teacher/classrooms",
+          "https://edutrack-qldm.onrender.com/api/teacher/classrooms",
           { headers: { Authorization: `Bearer ${token}` } }
         );
         const cls = Array.isArray(res.data) ? res.data : res.data.classrooms;
@@ -37,7 +37,7 @@ const MarkAttendance = () => {
       if (!selectedClass) return;
       try {
         const res = await axios.get(
-          `http://localhost:3000/api/teacher/classroom/${selectedClass.value}/students`,
+          `https://edutrack-qldm.onrender.com/api/teacher/classroom/${selectedClass.value}/students`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
         setStudents(res.data);
@@ -72,7 +72,7 @@ const MarkAttendance = () => {
 
     try {
       await axios.post(
-        "http://localhost:3000/api/teacher/attendance",
+        "https://edutrack-qldm.onrender.com/api/teacher/attendance",
         { classroomId: selectedClass.value, date, attendanceList },
         { headers: { Authorization: `Bearer ${token}` } }
       );

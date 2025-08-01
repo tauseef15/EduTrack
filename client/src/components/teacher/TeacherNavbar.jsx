@@ -57,7 +57,7 @@ const TeacherNavbar = () => {
     const fetchTeacher = async () => {
       if (!token) return;
       try {
-        const res = await fetch("http://localhost:3000/api/teacher/profile", {
+        const res = await fetch("https://edutrack-qldm.onrender.com/api/teacher/profile", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

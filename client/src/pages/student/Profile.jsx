@@ -24,7 +24,7 @@ function Profile() {
     const fetchProfile = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/api/student/profile",
+          "https://edutrack-qldm.onrender.com/api/student/profile",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -64,7 +64,7 @@ function Profile() {
       if (dp) data.append("dp", dp); // 👈 Make sure backend expects this field
 
       const res = await axios.put(
-        "http://localhost:3000/api/student/profile",
+        "https://edutrack-qldm.onrender.com/api/student/profile",
         data,
         {
           headers: {
@@ -102,7 +102,7 @@ function Profile() {
             />
           ) : formData.dpUrl ? (
             <img
-              src={`http://localhost:3000/uploads/${formData.dpUrl}`}
+              src={`https://edutrack-qldm.onrender.com/uploads/${formData.dpUrl}`}
               alt="Profile"
               className="object-cover w-full h-full"
             />

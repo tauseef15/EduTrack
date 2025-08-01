@@ -43,7 +43,7 @@ const AttendanceStudent = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        "http://localhost:3000/api/student/attendance/all",
+        "https://edutrack-qldm.onrender.com/api/student/attendance/all",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`,

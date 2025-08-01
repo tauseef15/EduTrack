@@ -10,7 +10,7 @@ const StudentAnnouncements = () => {
     const fetchAnnouncements = async () => {
       try {
         const res = await fetch(
-          "http://localhost:3000/api/student/announcements",
+          "https://edutrack-qldm.onrender.com/api/student/announcements",
           {
             headers: {
               Authorization: `Bearer ${token}`,

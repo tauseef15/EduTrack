@@ -9,7 +9,7 @@ const StudentTests = () => {
     setLoading(true);
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:3000/api/student/tests", {
+      const response = await fetch("https://edutrack-qldm.onrender.com/api/student/tests", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

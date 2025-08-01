@@ -12,7 +12,7 @@ const CreateClassroom = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:3000/api/teacher/create-classroom",
+        "https://edutrack-qldm.onrender.com/api/teacher/create-classroom",
         { name, code, description },
         {
           headers: {

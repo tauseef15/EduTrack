@@ -24,10 +24,10 @@ const TeacherDashboard = () => {
       const config = { headers: { Authorization: `Bearer ${token}` } };
 
       const [clsRes, testRes, annRes, noticeRes] = await Promise.all([
-        axios.get("http://localhost:3000/api/teacher/classrooms", config),
-        axios.get("http://localhost:3000/api/teacher/tests", config),
-        axios.get("http://localhost:3000/api/teacher/announcements", config),
-        axios.get("http://localhost:3000/api/teacher/notice", config),
+        axios.get("https://edutrack-qldm.onrender.com/api/teacher/classrooms", config),
+        axios.get("https://edutrack-qldm.onrender.com/api/teacher/tests", config),
+        axios.get("https://edutrack-qldm.onrender.com/api/teacher/announcements", config),
+        axios.get("https://edutrack-qldm.onrender.com/api/teacher/notice", config),
       ]);
 
       setClassrooms(clsRes.data || []);

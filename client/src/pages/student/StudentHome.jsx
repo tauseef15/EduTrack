@@ -23,13 +23,13 @@ const StudentHome = () => {
       try {
         const [profileRes, announceRes, testRes, resultRes, attendanceRes] =
           await Promise.all([
-            axios.get("http://localhost:3000/api/student/profile", { headers }),
-            axios.get("http://localhost:3000/api/student/announcements", {
+            axios.get("https://edutrack-qldm.onrender.com/api/student/profile", { headers }),
+            axios.get("https://edutrack-qldm.onrender.com/api/student/announcements", {
               headers,
             }),
-            axios.get("http://localhost:3000/api/student/tests", { headers }),
-            axios.get("http://localhost:3000/api/student/results", { headers }),
-            axios.get("http://localhost:3000/api/student/attendance/all", {
+            axios.get("https://edutrack-qldm.onrender.com/api/student/tests", { headers }),
+            axios.get("https://edutrack-qldm.onrender.com/api/student/results", { headers }),
+            axios.get("https://edutrack-qldm.onrender.com/api/student/attendance/all", {
               headers,
             }),
           ]);

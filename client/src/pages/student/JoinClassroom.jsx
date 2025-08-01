@@ -13,7 +13,7 @@ const JoinClassroom = () => {
     setError("");
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/classrooms/${classCode}`
+        `https://edutrack-qldm.onrender.com/api/classrooms/${classCode}`
       );
       setClassroom(response.data.classroom);
     } catch (err) {
@@ -26,7 +26,7 @@ const JoinClassroom = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `http://localhost:3000/api/student/join-classroom`,
+        `https://edutrack-qldm.onrender.com/api/student/join-classroom`,
         { rollNo, classCode },
         {
           headers: {

@@ -17,7 +17,7 @@ function ProfileSummary() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/teacher/profile", {
+        const res = await axios.get("https://edutrack-qldm.onrender.com/api/teacher/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -53,7 +53,7 @@ function ProfileSummary() {
       data.append("description", formData.description);
       if (dp) data.append("dp", dp);
 
-      const res = await axios.put("http://localhost:3000/api/teacher/profile", data, {
+      const res = await axios.put("https://edutrack-qldm.onrender.com/api/teacher/profile", data, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${token}`,

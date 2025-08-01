@@ -22,7 +22,7 @@ const StudentSignup = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/student/signup",
+        "https://edutrack-qldm.onrender.com/api/student/signup",
         form
       );
       localStorage.setItem("token", res.data.token); // Optional

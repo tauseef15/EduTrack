@@ -15,7 +15,7 @@ const Results = () => {
   useEffect(() => {
     const fetchTests = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/teacher/tests", {
+        const res = await fetch("https://edutrack-qldm.onrender.com/api/teacher/tests", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();
@@ -34,7 +34,7 @@ const Results = () => {
       setLoading(true);
       try {
         const res = await fetch(
-          `http://localhost:3000/api/teacher/tests/${selectedTest}/students`,
+          `https://edutrack-qldm.onrender.com/api/teacher/tests/${selectedTest}/students`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -68,7 +68,7 @@ const Results = () => {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/api/teacher/tests/${selectedTest}/results`,
+        `https://edutrack-qldm.onrender.com/api/teacher/tests/${selectedTest}/results`,
         {
           method: "POST",
           headers: {

@@ -8,7 +8,7 @@ const StudentResults = () => {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const res = await fetch("http://localhost:3000/api/student/results", {
+        const res = await fetch("https://edutrack-qldm.onrender.com/api/student/results", {
           headers: { Authorization: `Bearer ${token}` },
         });
         const data = await res.json();

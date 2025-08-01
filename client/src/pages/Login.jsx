@@ -24,8 +24,8 @@ const Login = () => {
       e.preventDefault();
       const endpoint =
         role === "student"
-          ? "http://localhost:3000/api/student/login"
-          : "http://localhost:3000/api/teacher/login";
+          ? "https://edutrack-qldm.onrender.com/api/student/login"
+          : "https://edutrack-qldm.onrender.com/api/teacher/login";
 
       try {
         const res = await axios.post(endpoint, form);

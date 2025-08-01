@@ -75,7 +75,7 @@ const UploadMaterial = () => {
     const fetchClassrooms = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/teacher/classrooms",
+          "https://edutrack-qldm.onrender.com/api/teacher/classrooms",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -94,7 +94,7 @@ const UploadMaterial = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "http://localhost:3000/api/teacher/upload-test",
+        "https://edutrack-qldm.onrender.com/api/teacher/upload-test",
         testData,
         {
           headers: {
@@ -122,7 +122,7 @@ const UploadMaterial = () => {
 
   const handleDeleteTest = async (testId) => {
     try {
-      await axios.delete(`http://localhost:3000/api/teacher/test/${testId}`, {
+      await axios.delete(`https://edutrack-qldm.onrender.com/api/teacher/test/${testId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setAllTests((prev) => prev.filter((test) => test._id !== testId));
@@ -134,7 +134,7 @@ const UploadMaterial = () => {
   const fetchTests = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:3000/api/teacher/tests",
+        "https://edutrack-qldm.onrender.com/api/teacher/tests",
         {
           headers: { Authorization: `Bearer ${token}` },
         }

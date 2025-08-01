@@ -21,7 +21,7 @@ const TeacherSignup = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:3000/api/teacher/signup", form);
+      const res = await axios.post("https://edutrack-qldm.onrender.com/api/teacher/signup", form);
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("role", "teacher");
       navigate("/teacher");

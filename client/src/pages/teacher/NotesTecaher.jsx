@@ -20,7 +20,7 @@ function NotesTeacher() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/teacher/classrooms", {
+      .get("https://edutrack-qldm.onrender.com/api/teacher/classrooms", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => setClassrooms(res.data))
@@ -31,7 +31,7 @@ function NotesTeacher() {
 
   const fetchNotes = () => {
     axios
-      .get("http://localhost:3000/api/teacher/notes", {
+      .get("https://edutrack-qldm.onrender.com/api/teacher/notes", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -59,7 +59,7 @@ function NotesTeacher() {
 
     axios
       .post(
-        "http://localhost:3000/api/teacher/upload-note",
+        "https://edutrack-qldm.onrender.com/api/teacher/upload-note",
         { ...noteData, classroomId: selectedClass },
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -86,7 +86,7 @@ function NotesTeacher() {
 
   const confirmDelete = () => {
     axios
-      .delete(`http://localhost:3000/api/teacher/notes/${noteToDelete}`, {
+      .delete(`https://edutrack-qldm.onrender.com/api/teacher/notes/${noteToDelete}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {

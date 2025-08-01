@@ -18,7 +18,7 @@ const CreateAnnouncement = () => {
 
   const fetchClassrooms = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/teacher/classrooms", {
+      const res = await fetch("https://edutrack-qldm.onrender.com/api/teacher/classrooms", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -30,7 +30,7 @@ const CreateAnnouncement = () => {
 
   const fetchAnnouncements = async () => {
     try {
-      const res = await fetch("http://localhost:3000/api/teacher/announcements", {
+      const res = await fetch("https://edutrack-qldm.onrender.com/api/teacher/announcements", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const data = await res.json();
@@ -42,7 +42,7 @@ const CreateAnnouncement = () => {
 
   const handleDelete = async (id) => {
     try {
-      const res = await fetch(`http://localhost:3000/api/teacher/announcements/${id}`, {
+      const res = await fetch(`https://edutrack-qldm.onrender.com/api/teacher/announcements/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -63,7 +63,7 @@ const CreateAnnouncement = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("http://localhost:3000/api/teacher/create-announcement", {
+      const res = await fetch("https://edutrack-qldm.onrender.com/api/teacher/create-announcement", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

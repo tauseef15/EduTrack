@@ -8,7 +8,7 @@ function NotesStudent() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/api/student/notes", {
+      .get("https://edutrack-qldm.onrender.com/api/student/notes", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
