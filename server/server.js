@@ -12,7 +12,6 @@ dotenv.config();
 const PORT = process.env.PORT || 3000;
 
 // Import routes
-const adminRoutes = require('./routes/adminRoutes');
 const teacherRoutes = require('./routes/teacherRoutes');
 const studentRoutes = require('./routes/studentRoutes');
 const classroomRoutes = require('./routes/classroomRoutes');
@@ -29,7 +28,6 @@ app.get('/', (req, res) => {
   res.send('Hello, Express!');
 });
 
-app.use('/api/admin', adminRoutes);
 app.use('/api/teacher', teacherRoutes);
 app.use('/api/student', studentRoutes);
 app.use('/api/classrooms', classroomRoutes);

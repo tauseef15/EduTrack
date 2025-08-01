@@ -1,7 +1,6 @@
 const jwt = require('jsonwebtoken');
 const Student = require('../models/studentModel');
 const Teacher = require('../models/teacherModel');
-// const Admin = require('../models/adminModel'); // Optional, only if needed
 
 const JWT_SECRET = process.env.JWT_SECRET || 'your_jwt_secret_key';
 
