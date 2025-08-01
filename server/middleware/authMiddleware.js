@@ -54,27 +54,3 @@ exports.verifyTeacher = async (req, res, next) => {
     res.status(401).json({ message: 'Invalid or expired token' });
   }
 };
-
-// 🧑‍💼 Verify Admin (optional)
-exports.verifyAdmin = async (req, res, next) => {
-  const token = extractToken(req);
-  if (!token) return res.status(403).json({ message: 'Access denied' });
-
-  try {
-    const decoded = jwt.verify(token, JWT_SECRET);
-
-    if (decoded.role !== 'admin') {
-      return res.status(401).json({ message: 'Unauthorized: Not an admin' });
-    }
-
-    const admin = await Admin.findById(decoded.id);
-    if (!admin) {
-      return res.status(404).json({ message: 'Admin not found' });
-    }
-
-    req.user = admin;
-    next();
-  } catch (err) {
-    res.status(401).json({ message: 'Invalid or expired token' });
-  }
-};
