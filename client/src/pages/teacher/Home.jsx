@@ -42,7 +42,7 @@ const TeacherDashboard = () => {
           (acc, cls) => acc + cls.students.length,
           0
         ),
-        tests: testRes.data.length,
+        tests: testRes.data.length, 
         announcements: annRes.data.length,
       });
     } catch (error) {
